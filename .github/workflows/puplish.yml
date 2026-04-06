@@ -16,45 +16,45 @@ jobs:
       - name: Create Zips
         run: |
           # 1. Resource Pack erstellen
-          cd "resourcepack/V-Wrench Resourcepack" && zip -r "../../V-Wrench-ResourcePack.zip" . && cd ../..
+          cd "resourcepack/Leather Nautilus Armor Resourcepack" && zip -r "../../Leather-Nautilus-Armor-ResourcePack.zip" . && cd ../..
           
           # 2. Datapack erstellen
-          cd "datapack/V-Wrench Datapack" && zip -r "../../V-Wrench-Datapack.zip" . && cd ../..
+          cd "datapack/Leather Nautilus Armor Datapack" && zip -r "../../Leather-Nautilus-Armor-Datapack.zip" . && cd ../..
 
       - name: Publish to Modrinth
         uses: cloudnode-pro/modrinth-publish@v2.3.2
         with:
           # Modrinth Token
-          token: ${{ secrets.MODRINTH_TOKEN }} # todo: add modrinth token secret to github
+          token: ${{ secrets.MODRINTH_TOKEN }}
 
           # Project ID
-          project: ---- # todo: add project id
+          project: ---- 
 
           # The version number (from tag, e.g., v1.1)
           version: "${{ github.ref_name }}"
 
           # The title of the version on Modrinth
-          name: "V-Wrench ${{ github.ref_name }}"
+          name: "${{ github.ref_name }}"
           
           # 'release', 'beta', or 'alpha'
           channel: alpha
           
           # List both files
           files: |-
-            V-Wrench-Datapack.zip
-            V-Wrench-ResourcePack.zip
+            Leather-Nautilus-Armor-Datapack.zip
+            Leather-Nautilus-Armor-ResourcePack.zip
           
           # Define which file is which
           # Format: filename=type
           file-types: |-
-            V-Wrench-ResourcePack.zip=required-resource-pack
+            Leather-Nautilus-Armor-ResourcePack.zip=required-resource-pack
           
           # Sets the Datapack as the main download button
-          primary-file: "V-Wrench-Datapack.zip"
+          primary-file: "Leather-Nautilus-Armor-Datapack.zip"
 
           loaders: |-
             minecraft
             datapack
             
           game-versions: |-
-            26.1-snapshot-10
+            26.1.1

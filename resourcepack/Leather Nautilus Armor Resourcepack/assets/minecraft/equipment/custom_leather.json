@@ -1,0 +1,12 @@
+{
+  "layers": {
+    "nautilus_body": [
+      {
+        "texture": "minecraft:leather",
+        "dyeable": {
+          "color_when_undyed": -6265536
+        }
+      }
+    ]
+  }
+}

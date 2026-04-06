@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_horse_armor",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": "Leather Nautilus Armor",
+                "minecraft:item_model": "minecraft:leather_nautilus_armor",
+                "minecraft:equippable": {
+                  "slot": "body",
+                  "asset_id": "minecraft:custom_leather",
+                  "allowed_entities": "#minecraft:can_wear_nautilus_armor",
+                  "shearing_sound": "minecraft:item.shears.snip"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

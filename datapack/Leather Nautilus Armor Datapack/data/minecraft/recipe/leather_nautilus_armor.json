@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LNL"
+  ],
+  "key": {
+    "L": [
+      "minecraft:leather"
+    ],
+    "N": [
+      "minecraft:iron_nugget"
+    ]
+  },
+  "result": {
+    "id": "minecraft:leather_horse_armor",
+    "components": {
+      "minecraft:item_name": "Leather Nautilus Armor",
+      "minecraft:item_model": "minecraft:leather_nautilus_armor",
+      "minecraft:equippable": {
+        "slot": "body",
+        "asset_id": "minecraft:custom_leather",
+        "allowed_entities": "#minecraft:can_wear_nautilus_armor",
+        "shearing_sound": "minecraft:item.shears.snip"
+      }
+    }
+  }
+}

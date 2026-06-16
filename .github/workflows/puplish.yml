@@ -37,7 +37,7 @@ jobs:
           name: "${{ github.ref_name }}"
           
           # 'release', 'beta', or 'alpha'
-          channel: beta
+          channel: release
           
           # List both files
           files: |-
